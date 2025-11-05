@@ -583,6 +583,26 @@ section[id]{ scroll-margin-top:96px; }
   /* Asigură-te că nu rămân spații fantomă sub hero */
   .hero + .tagline{ margin-top:8px; }
 }
+/* === Desktop overrides (≥1024px) === */
+@media (min-width: 1024px){
+  /* Titlul secțiunii “Înainte, către Origini” */
+  .intro-title, .section-title{
+    font-size: clamp(10px, 3.2vw, 42px); /* ajustează aici mărimea */
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+  }
+
+  /* Paragrafele din secțiune */
+  .intro-text p{
+    font-size: clamp(16px, 1.15vw, 20px); /* fă-l mai mare/mic după dorință */
+    line-height: 1.7;
+  }
+
+  /* Îngustează ușor caseta de text (~10%) */
+  .intro-text{
+    max-width: 52ch;
+  }
+}
 
 
 
