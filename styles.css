@@ -533,6 +533,50 @@ body.no-scroll{ overflow:hidden !important; position: relative !important; }
   }
   #hero + section, #hero + div, main > :first-child { margin-top:0 !important; padding-top:0 !important; }
 }
+/* ===== HERO (fix) ===== */
+.hero{
+  width:100%;
+  max-width:1200px;   /* cât headerul, pe desktop */
+  margin:0 auto;      /* centrează în pagină */
+  padding:0;          /* elimină orice spațiu */
+}
+.hero__img{
+  display:block;
+  width:100%;
+  height:auto;        /* păstrează proporția imaginii */
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+
+/* Tagline sub hero – mai mic și centrat */
+.tagline{
+  margin:12px auto 24px;
+  text-align:center;
+  line-height:1.2;
+  /* 20% mai mic vs ce aveai: ajustează fluid */
+  font-size:clamp(18px, 2.3vw, 34px);
+}
+
+/* Elimină banda neagră/gap dintre hero și secțiunea următoare */
+.section-intro, .intro, .content-section{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+/* Scroll offset corect când dai click din meniu */
+section[id]{ scroll-margin-top:96px; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px){
+  /* logo ușor mai mic, dacă îl ai în header ca .site-logo */
+  .site-logo{ transform:scale(.9); transform-origin:left center; }
+
+  .hero{ max-width:100%; padding:0 12px; }  /* puțin „air” lateral */
+  .tagline{ font-size:clamp(16px, 5vw, 24px); } /* clar sub un rând */
+
+  /* Asigură-te că nu rămân spații fantomă sub hero */
+  .hero + .tagline{ margin-top:8px; }
+}
 
 
 
