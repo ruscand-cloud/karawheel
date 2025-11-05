@@ -608,7 +608,7 @@ section[id]{ scroll-margin-top:96px; }
 
   /* Titlul din leadblock */
   .leadblock h2 {
-    font-size: 38px !important;  /* ajustează aici */
+    font-size: 28px !important;  /* ajustează aici */
     line-height: 1.2;
     font-weight: 700;
     margin-bottom: 14px;
