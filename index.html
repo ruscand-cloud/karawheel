@@ -30,7 +30,9 @@
 </header>
 
 <main>
-  <!-- HERO la lățimea foii; MOTTO sus, pe un rând, scalat -->
+  
+<main>
+  <!-- HERO la lățimea foii; motto SUS, 1 rând, scalat -->
   <section class="hero hero--wrap">
     <div class="hero-frame">
       <div class="hero-img"></div>
@@ -55,7 +57,10 @@
           <p><strong>Nu este doar un loc de dormit.</strong><br>Este o poveste locuită, o întoarcere la esențial, o invitație la liniște, aventură și regăsire.</p>
           <p>Descoperiți experiența Prairie Schooner — reconstruită cu grijă, respect față de tradiție și pasiune pentru lemn.</p>
         </div>
-        <div class="panel"><img src="assets/home_up_right.png" alt="Prairie Schooner — KaraWheel"></div>
+        <div class="panel">
+          <!-- Adaugă clasa postcard pe imaginile verticale "tip carte poștală" -->
+          <img src="assets/home_up_right.png" alt="Prairie Schooner — KaraWheel" class="postcard">
+        </div>
       </div>
     </div>
   </section>
@@ -87,6 +92,52 @@ document.addEventListener('DOMContentLoaded', function(){
   burger.addEventListener('click', ()=> toggle());
   menu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> toggle(false)));
   document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') toggle(false); });
+});
+</script>
+<script>
+// NAV: burger
+document.addEventListener('DOMContentLoaded', function(){
+  const burger = document.querySelector('.burger');
+  const menu   = document.getElementById('site-menu');
+  if(burger && menu){
+    function toggle(open){
+      const isOpen = (typeof open==='boolean') ? open : !menu.classList.contains('open');
+      menu.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.classList.toggle('no-scroll', isOpen);
+    }
+    burger.addEventListener('click', ()=> toggle());
+    menu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> toggle(false)));
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') toggle(false); });
+  }
+
+  // LIGHTBOX: pentru imaginile .postcard
+  const imgs = document.querySelectorAll('img.postcard');
+  if(imgs.length){
+    const wrap = document.createElement('div');
+    wrap.className = 'lb-backdrop';
+    wrap.innerHTML = '<img class="lb-img" alt=""><button class="lb-close" aria-label="Închide">×</button>';
+    document.body.appendChild(wrap);
+    const big = wrap.querySelector('.lb-img');
+    const close = wrap.querySelector('.lb-close');
+
+    imgs.forEach(img=>{
+      img.addEventListener('click', ()=>{
+        big.src = img.src;
+        wrap.classList.add('open');
+        document.body.classList.add('no-scroll');
+      });
+    });
+
+    function hide(){
+      wrap.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+      big.src = '';
+    }
+    close.addEventListener('click', hide);
+    wrap.addEventListener('click', (e)=>{ if(e.target === wrap) hide(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') hide(); });
+  }
 });
 </script>
 
