@@ -238,4 +238,51 @@ h1{font-size:48px} h2{font-size:40px}
   /* 6) Siguranță: niciun overlay să nu acopere headerul */
   .hero, .hero-frame, .hero-content{ z-index: auto !important; }
 }
+/* ================================
+   FINAL DESKTOP FIX PACK
+   ================================ */
+@media (min-width: 981px){
+
+  /* 1. LOGO VIZIBIL */
+  .logo{
+    display:block !important;
+    width:180px !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+  /* 2. BURGER HIDDEN (corect pe desktop) */
+  .burger{
+    display:none !important;
+  }
+
+  /* 3. HERO - afișat complet, nu decupat */
+  .hero-img{
+    background-size:contain !important;
+    background-repeat:no-repeat !important;
+    background-position:center top !important;
+    height:auto !important;
+    min-height:340px !important;
+  }
+
+  /* 4. TEXT −30% */
+  .leadblock,
+  .leadblock p{
+    font-size:70% !important;
+    line-height:1.5 !important;
+  }
+
+  /* 5. CASETĂ TEXT = lățimea imaginii */
+  .leadblock{
+    width:90% !important;
+    max-width:90% !important;
+    margin:0 auto !important;
+  }
+
+  /* IMAGINI POȘTALĂ — proportie fixa */
+  img.postcard{
+    width:65% !important;
+    margin:0 auto !important;
+  }
+}
 
