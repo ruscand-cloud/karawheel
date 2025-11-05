@@ -459,5 +459,34 @@ h1{font-size:48px} h2{font-size:40px}
 /* când meniul/galeria e deschisă — fără shift-uri */
 body.no-scroll{ overflow:hidden !important; position: relative !important; }
 
+/* === Mobile fine-tune (<=980px) === */
+@media (max-width:980px){
+
+  /* 1) Logo -10% */
+  .logo{ width:135px !important; }
+
+  /* 2) Eliminăm spațiul mare sub hero */
+  .hero{ padding:0 !important; margin:0 0 8px !important; } /* zero padding pe secțiunea HERO */
+  .hero-img{
+    min-height:34vh !important;      /* puțin mai mic decât înainte */
+    /* păstrăm contain pentru a vedea toată imaginea */
+    background-size:contain !important;
+    background-position:center top !important;
+    background-repeat:no-repeat !important;
+  }
+  /* primul bloc după hero (intro) începe mai sus */
+  #intro{ padding-top:14px !important; }
+
+  /* 3) Text din caseta (leadblock) -20% și lățime egală cu imaginea */
+  .leadblock{
+    font-size:80% !important;         /* ~ -20% */
+    line-height:1.45 !important;
+    width:90vw !important;
+    max-width:90vw !important;
+    margin:0 auto !important;
+  }
+  /* imaginea rămâne 90vw ca referință de lățime */
+  .panel img{ width:90vw !important; margin:0 auto !important; }
+}
 
 
