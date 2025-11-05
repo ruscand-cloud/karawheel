@@ -1,0 +1,171 @@
+:root{
+  --bg:#1f1b18; --ink:#e9e0d4; --sand:#e1bc86; --muted:#b7aa98; --ink-soft:#d6cabb;
+  --panel:#231e1a; --ring:rgba(255,255,255,.08); --maxw:1200px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Lora,serif;line-height:1.6}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* Header / Nav */
+.site-header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.20));backdrop-filter:saturate(1.1) blur(4px)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{width:180px;height:auto}
+.menu{display:flex;align-items:center;gap:0}
+.menu a{padding:10px 14px;border:1px solid transparent;border-radius:999px;font-weight:600;margin-left:10px}
+.menu a:hover{border-color:var(--ring)}
+.menu .cta{background:var(--sand);color:#201a15;border-color:transparent}
+.menu .cta:hover{filter:brightness(.96)}
+.menu a.active{border-color:var(--sand); color:var(--sand)}
+.burger{display:none;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:1px solid var(--ring);border-radius:8px;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:3px 0}
+
+/* Sections */
+section{padding:72px 0;border-bottom:1px solid var(--ring)}
+h1,h2{font-family:"Playfair+Display",serif;color:var(--sand);margin:0 0 14px}
+h1{font-size:48px} h2{font-size:40px}
+.lede{color:var(--muted);font-size:18px;margin-bottom:24px}
+
+/* HERO la lățimea foii */
+.hero{ margin:0; padding:0; position:relative; }
+.hero--wrap{ background:transparent; }
+.hero-frame{ max-width: var(--maxw); margin: 0 auto; padding: 0 20px; position: relative; }
+.hero-img{
+  width:100%;
+  aspect-ratio:16/4;           /* panoramic desktop */
+  min-height:290px;
+  background:url('assets/Hero.png') center 65% / cover no-repeat;
+  border-radius:0 0 18px 18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35)
+}
+
+/* Motto SUS pe toate ecranele */
+.hero-content{
+  position:absolute; inset:0;
+  display:block;               /* scoatem centrare verticală */
+}
+.hero-content .wrap{ max-width:var(--maxw); padding:0 20px; }
+.tag-box{
+  position:absolute; top:.9em; left:50%; transform:translateX(-50%);
+  width:40vw; max-width:560px; text-align:center;
+}
+.tag{
+  font-family:"Playfair Display",serif; font-weight:800;
+  white-space:nowrap;          /* un singur rând */
+  margin:0; line-height:1.08;
+  font-size:clamp(18px, 2.2vw, 34px);  /* controlat pe desktop */
+  color:#f4e8d8; text-shadow:0 8px 28px rgba(0,0,0,.6);
+}
+
+/* Intro split */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.split.reverse{grid-template-columns:.9fr 1.1fr}
+.panel{background:var(--panel);border:1px solid var(--ring);border-radius:14px;padding:18px}
+.panel img{width:75%;margin:0 auto;display:block}
+
+/* Lead text */
+.leadblock{padding:24px 28px;border:1px solid rgba(70,50,30,.28);background:rgba(255,248,240,.35);border-radius:6px;backdrop-filter:blur(1px);box-shadow:0 0 8px rgba(0,0,0,0.08);position:relative}
+.leadblock::before,.leadblock::after{content:"";position:absolute;width:18px;height:18px;border:1px solid rgba(225,188,134,.55)}
+.leadblock::before{left:-9px;top:-9px;border-right:none;border-bottom:none;border-radius:6px 0 0 0;opacity:.6}
+.leadblock::after{right:-9px;bottom:-9px;border-left:none;border-top:none;border-radius:0 0 6px 0;opacity:.6}
+.leadblock p{margin:0 0 14px;color:var(--ink-soft);font-size:18px}
+.leadblock strong{color:var(--ink)}
+
+/* Autor & galerie */
+.author{display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:start}
+.portrait{border-radius:12px;overflow:hidden;border:1px solid var(--ring)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.grid3 img{aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--ring)}
+
+/* Footer */
+.site-footer{padding:28px 0;text-align:center;color:var(--muted)}
+.footer-inner-3col{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.footer-left{text-align:left}
+.footer-right{text-align:right}
+.footer-center img{width:74px;opacity:.92}
+.footer-mobile-note{display:none; color:var(--muted); font-size:14px;}
+
+/* ===== Mobile / Tablet ===== */
+@media (max-width:980px){
+  .burger{display:inline-flex}
+  .menu{
+    position:fixed; z-index:9999; top:64px; left:12px; right:12px;
+    display:none; flex-direction:column; background:var(--panel);
+    border:1px solid var(--ring); border-radius:12px; padding:8px;
+    box-shadow:0 12px 40px rgba(0,0,0,.4);
+  }
+  .menu.open{ display:flex; }
+  .menu a{ margin:6px 0; padding:12px 14px; border:1px solid var(--ring); border-radius:10px; }
+  body.no-scroll{ overflow:hidden; }
+
+  section{ padding:52px 0; }
+  .split,.split.reverse{grid-template-columns:1fr}
+  .panel img{width:88%}
+  .author{grid-template-columns:1fr}
+
+  /* HERO pe mobil: full-bleed, motto SUS, 1/3 lățime, pe un rând */
+  .hero--wrap .hero-frame{ max-width:100vw !important; padding:0 !important; }
+  .hero-img{
+    width:100vw !important;
+    aspect-ratio:16/9; min-height:40vh;
+    background-position:center 55%;
+    border-radius:0 0 14px 14px;
+  }
+  .hero-content{ position:absolute !important; inset:0 !important; display:block !important; }
+  .hero-content .wrap{ max-width:100vw !important; padding:0 !important; }
+  .tag-box{
+    position:absolute !important;
+    top:.9em !important; left:50% !important; transform:translateX(-50%) !important;
+    width:33vw !important; max-width:92vw !important; text-align:center !important;
+    white-space:nowrap !important;
+  }
+  .tag{
+    font-size: clamp(9px, 2.2vw, 24px) !important;
+    line-height:1.05 !important;
+    margin:0 !important;
+  }
+
+  /* Footer mobil: doar mesaj scurt */
+  .footer-inner-3col{ display:none; }
+  .footer-mobile-note{ display:block; padding-top:8px; }
+}
+
+/* telefoane foarte înguste */
+@media (max-width:400px){
+  .hero-img{ min-height:36vh; background-position:center 52%; }
+  .tag{ font-size: clamp(8px, 2vw, 20px) !important; }
+}
+/* === HERO FULL BLEED pe mobil (garantat 100vw) === */
+@media (max-width: 980px){
+  .hero--wrap .hero-frame{
+    max-width: none !important;
+    width: 100vw !important;
+    padding: 0 !important;
+
+    /* „bleed” real din container, ca să ignore marginile foilor */
+    position: relative !important;
+    left: 50% !important; right: 50% !important;
+    margin-left: -50vw !important; margin-right: -50vw !important;
+  }
+  .hero-img{
+    width: 100% !important;       /* se potrivește pe 100vw-ul de mai sus */
+    aspect-ratio: 16/9;
+    min-height: 40vh;
+    background-position: center 55%;
+    border-radius: 0 0 14px 14px;
+  }
+}
+/* === DESKTOP: motto mai mic (~25% reducere) === */
+@media (min-width: 981px){
+  .tag{
+    /* înainte aveai ~max 34–36px; acum limităm la 26px ≈ −25% */
+    font-size: clamp(18px, 1.8vw, 26px) !important;
+  }
+  /* opțional: ținem caseta puțin mai îngustă ca să nu pară masivă */
+  .tag-box{
+    width: 36vw;               /* era 40vw; devine mai suplu */
+    max-width: 520px;
+  }
+}
+

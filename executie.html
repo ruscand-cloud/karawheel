@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KaraWheel — Execuție</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<script>
+  (function(){
+    const burger = document.querySelector('.burger');
+    const menu = document.getElementById('site-menu');
+    if(!burger || !menu) return;
+    burger.addEventListener('click', ()=>{
+      const open = menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('no-scroll', open);
+    });
+  })();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const burger = document.querySelector('.burger');
+  const menu   = document.getElementById('site-menu');
+  if(!burger || !menu) return;
+
+  function toggle(open){
+    const isOpen = (typeof open==='boolean') ? open : !menu.classList.contains('open');
+    menu.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.classList.toggle('no-scroll', isOpen);
+  }
+
+  burger.addEventListener('click', ()=> toggle());
+  menu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> toggle(false)));
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') toggle(false); });
+});
+</script>
+
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <img src="assets/Logo.png" alt="KaraWheel" class="logo">
+    </a>
+
+    <button class="burger" type="button" aria-label="Deschide meniul" aria-controls="site-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="site-menu" class="menu">
+      <a href="index.html">Home</a>
+      <a href="povestea.html">Povestea</a>
+      <a href="concept.html">Concept</a>
+      <a href="executie.html">Execuție</a>
+      <a href="autor.html">Autor</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section>
+  <div class="wrap">
+    <h1>Execuție</h1>
+    <p class="lede">Dincolo de randări — mâna pe lemn. Îmbinări curate, ritm structural, tipic de atelier.</p>
+    <div class="split">
+      <div class="panel"><img src="assets/Execuție_up_left.png" alt="Detaliu lemn"></div>
+      <div>
+        <h2>Ordine în detaliu</h2>
+        <p>Secvența de montaj, protecțiile, dimensionarea — totul urmărește aceeași logică: să iasă corect și frumos.</p>
+      </div>
+    </div>
+    <div style="height:18px"></div>
+    <div class="split reverse">
+      <div>
+        <h2>Structură cu respect</h2>
+        <p>Imaginile din bisericile de lemn și casele proiectate arată modul în care lucrăm: atent, tipicar, cu obsesie pentru detaliu.</p>
+      </div>
+      <div class="panel"><img src="assets/Execuție_middle_left.png" alt="Structură în lucru"></div>
+    </div>
+    <div style="height:18px"></div>
+    <div class="split">
+      <div class="panel"><img src="assets/Execuție_down_left.png" alt="Interior lemn"></div>
+      <div>
+        <h2>Calm &amp; solid</h2>
+        <p>Nu e efect. E esență. Lemnul rămâne personajul principal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- Versiunea desktop/tabletă -->
+    <div class="footer-inner-3col">
+      <div class="footer-left">
+        KaraWheel<span style="font-size:10px;vertical-align:top;">™</span> — A PRAIRIE SCHOONER PROJECT
+      </div>
+      <div class="footer-center">
+        <img src="assets/Stamp.png" alt="Stamp KaraWheel" class="footer-stamp" />
+      </div>
+      <div class="footer-right">
+        © 2025 by DOMETO — Ruscan Dorin
+      </div>
+    </div>
+
+    <!-- Versiunea mobil (doar textul cerut) -->
+    <div class="footer-mobile-note">KaraWheel — A Prairie Schooner Project</div>
+  </div>
+</footer>
+</body>
+</html>
