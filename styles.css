@@ -92,7 +92,7 @@ h1{font-size:48px} h2{font-size:40px}
 @media (min-width:981px){
   /* 1) Tag centrat + ~10% mai mare (față de starea anterioară) */
   .tag-box{ text-align:center; margin:0 auto; }
-  .tag{ font-size: clamp(20px, 2.4vw, 37px) !important; }
+  .tag{ font-size: clamp(18px, 1.9vw, 28px) !important; }
 
   /* 2) Titluri -20% */
   h1{ font-size: 38px !important; }
@@ -179,3 +179,63 @@ h1{font-size:48px} h2{font-size:40px}
   display:flex; align-items:center; justify-content:center; font-size:20px; cursor:pointer;
   background: rgba(255,255,255,.08);
 }
+/* ====== MOBILE FIX PACK (<=980px) ====== */
+@media (max-width:980px){
+
+  /* 1) Header: logo vizibil, burger vizibil, deasupra oricărui element */
+  .site-header{ z-index: 10000 !important; }
+  .logo{ width: 162px !important; display:block !important; }
+  .burger{ display:inline-flex !important; }
+  .menu{ z-index: 99999 !important; }
+
+  /* 2) HERO: pe lățimea ecranului, să se vadă tot (fără să fie tăiat) */
+  .hero--wrap .hero-frame{
+    max-width: none !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    position: relative !important;
+    left: 50% !important; right: 50% !important;
+    margin-left: -50vw !important; margin-right: -50vw !important; /* bleed real */
+  }
+  .hero-img{
+    width: 100% !important;
+    aspect-ratio: 16/9;       /* păstrăm proporția */
+    min-height: 40vh;         /* suficient ca să nu “taie” căruțele */
+    background-position: center 55%;
+    border-radius: 0 0 14px 14px;
+  }
+
+  /* 3) Tag (motto) SUS, pe un singur rând, mai discret, centrat */
+  .hero-content{ position:absolute !important; inset:0 !important; display:block !important; }
+  .hero-content .wrap{ max-width:100vw !important; padding:0 !important; }
+  .tag-box{
+    position:absolute !important;
+    top:.9em !important; left:50% !important; transform:translateX(-50%) !important;
+    width: 45vw !important;                 /* puțin mai lat ca să rămână 1 rând */
+    max-width: 92vw !important;
+    text-align:center !important;
+    white-space: nowrap !important;         /* 1 singur rând */
+  }
+  .tag{
+    font-size: clamp(12px, 2.6vw, 24px) !important;
+    line-height: 1.06 !important;
+    margin: 0 !important;
+  }
+
+  /* 4) Layout “una sub alta” în secțiuni: text apoi poză */
+  .split, .split.reverse{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .split .panel img{ width: 88% !important; margin: 0 auto !important; }
+
+  /* 5) Titluri & text mai mici */
+  h1{ font-size: 26px !important; }
+  h2{ font-size: 20px !important; }
+  body{ font-size: 87% !important; }
+
+  /* 6) Siguranță: niciun overlay să nu acopere headerul */
+  .hero, .hero-frame, .hero-content{ z-index: auto !important; }
+}
+
