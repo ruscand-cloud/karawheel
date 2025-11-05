@@ -603,6 +603,25 @@ section[id]{ scroll-margin-top:96px; }
     max-width: 52ch;
   }
 }
+/* Desktop overrides */
+@media (min-width: 1024px){
+
+  /* Titlul din leadblock */
+  .leadblock h2 {
+    font-size: 42px !important;  /* ajustează aici */
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  /* Text din leadblock */
+  .leadblock p {
+    font-size: 20px !important;  /* ajustează aici */
+    line-height: 1.55;
+    max-width: 58ch;  /* îngustează blocul de text */
+  }
+}
+
 
 
 
