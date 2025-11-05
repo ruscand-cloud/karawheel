@@ -100,7 +100,7 @@ h1{font-size:48px} h2{font-size:40px}
 
   /* 2) Titluri -20% */
   h1{ font-size: 38px !important; }
-  h2{ font-size: 32px !important; }
+  h2{ font-size: 10px !important; }
 
   /* 4) Imaginile “carte poștală” desktop: -10..15% + zoom cursor */
   img.postcard{ width:65% !important; margin-left:auto; margin-right:auto; cursor: zoom-in; }
