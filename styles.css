@@ -285,4 +285,93 @@ h1{font-size:48px} h2{font-size:40px}
     margin:0 auto !important;
   }
 }
+@media (max-width: 980px){
+  /* doar logo + burger în header */
+  .site-header{ z-index: 10000 !important; }
+  .logo{ width:150px !important; display:block !important; opacity:1 !important; visibility:visible !important; }
+  .burger{ display:flex !important; }
+
+  /* ascunde bara de linkuri când NU e deschisă */
+  .menu{
+    display:none !important;
+    position:fixed !important;
+    top:64px !important; left:12px !important; right:12px !important;
+    flex-direction:column !important;
+    background:var(--panel) !important;
+    border:1px solid var(--ring) !important;
+    border-radius:12px !important;
+    padding:8px !important;
+    z-index:99999 !important;
+    box-shadow:0 12px 40px rgba(0,0,0,.4) !important;
+  }
+  .menu.open{ display:flex !important; }
+  .menu a{ margin:6px 0 !important; padding:12px 14px !important; border:1px solid var(--ring) !important; border-radius:10px !important; }
+  body.no-scroll{ overflow:hidden !important; }
+}
+@media (max-width: 980px){
+  /* container hero 100vw fără hack-uri care taie marginile */
+  .hero{ overflow:visible !important; }
+  .hero--wrap .hero-frame{
+    width:100vw !important;
+    max-width:100vw !important;
+    margin:0 !important;
+    padding:0 !important;
+    transform:translateX(0) !important;
+  }
+
+  /* imaginea să se vadă ÎNTREAGĂ (fără crop) */
+  .hero-img{
+    width:100% !important;
+    background-size: contain !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    aspect-ratio: 16/9 !important;   /* păstrăm proporția */
+    min-height: 42vh !important;     /* suficient cât să nu pară tăiată */
+    border-radius: 0 0 12px 12px !important;
+  }
+
+  /* motto sus, pe un singur rând */
+  .hero-content{ position:absolute !important; inset:0 !important; display:block !important; }
+  .hero-content .wrap{ max-width:100vw !important; padding:0 !important; }
+  .tag-box{
+    position:absolute !important;
+    top:.8em !important;
+    left:50% !important; transform:translateX(-50%) !important;
+    width:90vw !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+  }
+  .tag{
+    font-size: clamp(12px, 2.2vw, 18px) !important;
+    line-height:1.06 !important;
+    margin:0 !important;
+  }
+}
+@media (max-width: 980px){
+  /* stivuire: text sub/sus poză, nu în paralel */
+  .split, .split.reverse{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  /* imaginea */
+  .panel img{
+    width:90vw !important;
+    margin:0 auto !important;
+    display:block !important;
+  }
+
+  /* caseta text la fel de lată ca imaginea + text mai mic */
+  .leadblock{
+    width:90vw !important;
+    max-width:90vw !important;
+    margin:0 auto !important;
+    font-size:70% !important;     /* ≈ −30% */
+    line-height:1.45 !important;
+    padding:18px !important;
+  }
+}
+
+
 
