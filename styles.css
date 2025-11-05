@@ -587,14 +587,14 @@ section[id]{ scroll-margin-top:96px; }
 @media (min-width: 1024px){
   /* Titlul secțiunii “Înainte, către Origini” */
   .intro-title, .section-title{
-    font-size: clamp(28px, 3.2vw, 20px); /* ajustează aici mărimea */
+    font-size: clamp(28px, 3.2vw, 42px); /* ajustează aici mărimea */
     line-height: 1.2;
     letter-spacing: 0.2px;
   }
 
   /* Paragrafele din secțiune */
   .intro-text p{
-    font-size: clamp(16px, 1.15vw, 20px); /* fă-l mai mare/mic după dorință */
+    font-size: clamp(24px, 1.15vw, 26px); /* fă-l mai mare/mic după dorință */
     line-height: 1.7;
   }
 
