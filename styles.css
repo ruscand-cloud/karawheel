@@ -19,7 +19,11 @@ a{color:inherit;text-decoration:none}
 .menu .cta:hover{filter:brightness(.96)}
 .menu a.active{border-color:var(--sand); color:var(--sand)}
 .burger{display:none;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:1px solid var(--ring);border-radius:8px;cursor:pointer}
-.burger span{display:block;width:22px;height:2.5px;background:var(--ink);margin:3px 0}
+.burger span{  width:26px;  height:3px;  background:var(--ink);
+  margin:4px 0;
+  border-radius:2px;
+}
+
 
 /* Sections */
 section{padding:72px 0;border-bottom:1px solid var(--ring)}
@@ -572,7 +576,9 @@ section[id]{ scroll-margin-top:96px; }
   .site-logo{ transform:scale(.9); transform-origin:left center; }
 
   .hero{ max-width:100%; padding:0 12px; }  /* puțin „air” lateral */
-  .tagline{ font-size:clamp(16px, 5vw, 24px); } /* clar sub un rând */
+ .tagline{  font-size: clamp(12px, 4vw, 18px);  white-space: nowrap;  margin-top:10px;
+}
+
 
   /* Asigură-te că nu rămân spații fantomă sub hero */
   .hero + .tagline{ margin-top:8px; }
