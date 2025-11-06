@@ -36,8 +36,7 @@
   }
 }
 </style>
-<style>
-/* === NAV active/highlight states === */
+<style>/* === NAV active/highlight states === */
 .nav a, nav a { position: relative; display: inline-block; }
 .nav a.nav-link, nav a.nav-link { text-decoration: none; }
 .nav a.nav-link:focus-visible, nav a.nav-link:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
@@ -48,26 +47,12 @@
   left: 0; right: 0; bottom: -4px;
   height: 2px;
   background: currentColor;
-}
-
-/* === HERO layout helpers === */
-.hero-frame { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
-.hero-frame img.hero-img { display: block; width: 100%; height: auto; }
-.hero-textpanel {
-  display: inline-block;
-  max-width: min(780px, 90%);
-  padding: .75rem 1rem;
-  border: 1px solid rgba(0,0,0,.15);
-  background: rgba(255,255,255,.65);
-  backdrop-filter: blur(3px);
-  margin-inline: 0; /* align left with hero */
-}
-.hero-textpanel .hero-title { margin: 0 0 .25rem 0; line-height: 1.15; }
-.hero-textpanel .hero-sub { margin: 0; }
-
-@media (min-width: 900px) {
-  .hero-frame { grid-template-columns: 1fr auto; align-items: start; }
-  .hero-textpanel { margin-top: 0; } /* top aligned with image */
+}</style><style>
+/* === Hero quote (simple, no box) === */
+.hero-quote { 
+  margin: .5rem 0 1rem 0;
+  font-size: clamp(1rem, 1.2vw + .8rem, 1.25rem);
+  line-height: 1.4;
 }
 </style></head>
 <script>
@@ -107,9 +92,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </header>
 <!-- HERO START (fix) -->
 <section aria-label="Hero" class="hero">
-<div class="hero-frame"><img alt="KaraWheel hero" class="hero__img hero-img" src="assets/Hero.png"/><div class="hero-textpanel"><p class="hero-sub">Trecutul nu este pierdut — doar trebuie regăsit.</p></div></div>
+<img alt="KaraWheel hero" class="hero__img" src="assets/Hero.png"/><p class="hero-quote">Trecutul nu este pierdut — doar trebuie regăsit.</p>
 </section>
-
 <!-- HERO END (fix) -->
 <main>
 <main>

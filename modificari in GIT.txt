@@ -1,5 +1,0 @@
-Schimbă un text mic → salvează
-Apoi în terminal:
-git add .
-git commit -m "test update"
-git push
