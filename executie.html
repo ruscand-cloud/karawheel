@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KaraWheel — Execuție</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="desktop.css">  <!-- nou -->
+>
 </head>
 <script>
   (function(){
@@ -124,36 +126,35 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 </header>
 
-
-<section>
+<section class="section">
   <div class="wrap">
-    <h1>Execuție</h1>
-    <p class="lede">Dincolo de randări — mâna pe lemn. Îmbinări curate, ritm structural, tipic de atelier.</p>
-    <div class="split">
-      <div class="panel"><img src="assets/Execuție_up_left.png" alt="Detaliu lemn"></div>
+    <h2 class="section-title">Execuție</h2>
+
+    <div class="exec-row">
       <div>
-        <h2>Ordine în detaliu</h2>
-        <p>Secvența de montaj, protecțiile, dimensionarea — totul urmărește aceeași logică: să iasă corect și frumos.</p>
+        <figure class="img-card--exec">
+          <img src="assets/Executie_up_left.png" alt="Execuție — 1">
+        </figure>
+        <div class="exec-caption">…text scurt despre etapa 1…</div>
       </div>
-    </div>
-    <div style="height:18px"></div>
-    <div class="split reverse">
+
       <div>
-        <h2>Structură cu respect</h2>
-        <p>Imaginile din bisericile de lemn și casele proiectate arată modul în care lucrăm: atent, tipicar, cu obsesie pentru detaliu.</p>
+        <figure class="img-card--exec">
+          <img src="assets/Executie_middle_left.png" alt="Execuție — 2">
+        </figure>
+        <div class="exec-caption">…text scurt despre etapa 2…</div>
       </div>
-      <div class="panel"><img src="assets/Execuție_middle_left.png" alt="Structură în lucru"></div>
-    </div>
-    <div style="height:18px"></div>
-    <div class="split">
-      <div class="panel"><img src="assets/Execuție_down_left.png" alt="Interior lemn"></div>
+
       <div>
-        <h2>Calm &amp; solid</h2>
-        <p>Nu e efect. E esență. Lemnul rămâne personajul principal.</p>
+        <figure class="img-card--exec">
+          <img src="assets/Executie_down_left.png" alt="Execuție — 3">
+        </figure>
+        <div class="exec-caption">…text scurt despre etapa 3…</div>
       </div>
     </div>
   </div>
 </section>
+
 
 <footer class="site-footer">
   <div class="wrap">
@@ -174,5 +175,9 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="footer-mobile-note">KaraWheel — A Prairie Schooner Project</div>
   </div>
 </footer>
+
+<script src="lightbox.js"></script> <!-- nou -->
+
+
 </body>
 </html>

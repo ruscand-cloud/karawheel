@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KaraWheel — Concept</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="desktop.css">  <!-- nou -->
+
 </head>
 <script>
   (function(){
@@ -124,33 +126,36 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 </header>
 
-
-<section>
+<section class="section">
   <div class="wrap">
-    <h1>Concept</h1>
-    <p class="lede">Materiale naturale și detalii curate. Structură din lemn masiv. Proporții istorice, confort contemporan.</p>
-    <div class="split">
-      <div class="panel"><img src="assets/concept_up_right.png" alt="Plan cameră"></div>
-      <div>
-        <h2>Ordine și căldură</h2>
-        <p>Zona de dormit și baia sunt gândite să păstreze lemnul la vedere. Fiecare muchie are sens, fiecare panou respiră.</p>
+    <div class="section-grid">
+      <div class="section-text">
+        <h2 class="section-title">Concept</h2>
+        <div class="leadblock">
+          <p>…text Concept 1…</p>
+        </div>
+      </div>
+
+      <figure class="img-card">
+        <img src="assets/concept_up_right.png" alt="Concept — sus dreapta">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-grid reverse">
+      <figure class="img-card">
+        <img src="assets/concept_down_right.png" alt="Concept — jos stânga">
+      </figure>
+
+      <div class="section-text">
+        <div class="leadblock">
+          <p>…text Concept 2…</p>
+        </div>
       </div>
     </div>
-    <div style="height:20px"></div>
-    <div class="split reverse">
-      <div>
-        <h2>Frumusețea utilă</h2>
-        <p>Acces clar pe trepte, platforme sigure, mobilier de exterior care continuă povestea.</p>
-      </div>
-      <div class="panel"><img src="assets/concept_down_right.png" alt="Exterior polaroid"></div>
-    </div>
-    <div style="height:26px"></div>
-    <div class="split">
-      <div class="panel"><img src="assets/Plate_01 - Floor Plan.png" alt="Plan"></div>
-      <div class="panel"><img src="assets/Plate_02 - Side Elevation.png" alt="Vedere laterală"></div>
-    </div>
-    <div style="height:12px"></div>
-    <div class="panel wrap" style="margin-top:12px"><img src="assets/Plate_03 - Front Elevation.png" alt="Fațadă"></div>
   </div>
 </section>
 
@@ -173,5 +178,9 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="footer-mobile-note">KaraWheel — A Prairie Schooner Project</div>
   </div>
 </footer>
+<script src="script.js"></script>   <!-- dacă îl folosești -->
+<script src="lightbox.js"></script> <!-- nou -->
+
+
 </body>
 </html>

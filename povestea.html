@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KaraWheel — Povestea</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="desktop.css">  <!-- nou -->
+
 </head>
 <script>
   (function(){
@@ -124,27 +126,59 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 </header>
 
-<section>
-  <div class="wrap">
-    <h1>Povestea</h1>
-    <p class="lede">Nu este rulotă și nici tiny-house. Este arhitectură din lemn — reinterpretarea unui simbol al frontierei.</p>
-    <div class="split">
-      <div class="panel"><img src="assets/povestea_middle_left.png" alt="Camp 1906"></div>
-      <div>
-        <h2>O casă pe drum, născută din lemn</h2>
-        <p>Prairie Schooner a cucerit apusul cu simplitatea sa. KaraWheel păstrează proporțiile, ritmul, nervurile pure ale lemnului — dar adaugă o baie reală (wc, lavoar, duș) și răcire discretă. Confort la care pionierii nici n-ar fi visat.</p>
+<main>
+  <!-- Povestea - bloc 1 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-grid">
+        <div class="section-text">
+          <h2 class="section-title">Povestea</h2>
+          <div class="leadblock">
+            <p>Textul tău 1...</p>
+          </div>
+        </div>
+
+        <figure class="img-card">
+          <img src="assets/povestea_up_right.png" alt="Povestea sus dreapta">
+        </figure>
       </div>
     </div>
-    <div style="height:20px"></div>
-    <div class="split reverse">
-      <div>
-        <h2>Memorie reimaginată</h2>
-        <p>Am ales un limbaj vizual coerent — tonuri sepia, muchii patinate, ștampilă KaraWheel — pentru a ancora proiectul într-o estetică de frontieră elegantă.</p>
+  </section>
+
+  <!-- Povestea - bloc 2 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-grid reverse">
+        <figure class="img-card">
+          <img src="assets/povestea_middle_left.png" alt="Povestea mijloc stânga">
+        </figure>
+
+        <div class="section-text">
+          <div class="leadblock">
+            <p>Textul tău 2...</p>
+          </div>
+        </div>
       </div>
-      <div class="panel"><img src="assets/povestea_down_right.png" alt="Camp 1903"></div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Povestea - bloc 3 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-grid">
+        <div class="section-text">
+          <div class="leadblock">
+            <p>Textul tău 3...</p>
+          </div>
+        </div>
+
+        <figure class="img-card">
+          <img src="assets/povestea_down_right.png" alt="Povestea jos dreapta">
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -165,5 +199,9 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="footer-mobile-note">KaraWheel — A Prairie Schooner Project</div>
   </div>
 </footer>
+<script src="script.js"></script>   <!-- dacă îl folosești -->
+<script src="lightbox.js"></script> <!-- nou -->
+
+
 </body>
 </html>
