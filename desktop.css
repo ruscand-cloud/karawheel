@@ -47,7 +47,7 @@
 .img-card img,
 .img-card--exec img {
   width: 310px;              /* imaginea propriu-zisă */
-  height: 450px;
+  height: 465px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
@@ -72,7 +72,7 @@
     border:1px solid rgba(255,255,255,.14);
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 10px 28px rgba(0,0,0,.35);
+   
     cursor: zoom-in;
   }
   .img-card--exec > img{width:100%; height:100%; object-fit:cover; display:block;}
