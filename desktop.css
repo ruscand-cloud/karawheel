@@ -122,26 +122,24 @@
   margin: 0 auto;
 }
 
-/* imaginea încadrată în chenar */
-.intro-image-frame {
-  width: 480px;
-  height: 400px;
-  margin: 0 auto;
-  border: 1px solid rgba(255,255,255,0.2);
+/*.intro-image-frame {
+  width: 600px;                      /* lățimea casetei */
+  margin: 0 auto 3em auto;
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 10px;
   overflow: hidden;
   background: radial-gradient(circle at center, #222 0%, #111 100%);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .intro-image-frame img {
-  width: 440px;
+  width: 500px;                      /* imagine vizibilă complet */
   height: auto;
-  object-fit: cover;
+  object-fit: contain;               /* nimic tăiat */
   border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
