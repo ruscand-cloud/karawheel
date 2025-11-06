@@ -621,6 +621,20 @@ section[id]{ scroll-margin-top:96px; }
     max-width: 58ch;  /* îngustează blocul de text */
   }
 }
+/* Povestea: imaginea history_prairie */
+.intro-image-frame {
+  padding: 1rem 0;              /* spațiu sus/jos; ajustează după gust */
+  height: auto !important;      /* nu forțăm înălțime fixă */
+  overflow: visible !important; /* nu tăiem imaginea */
+}
+
+.intro-image-frame img {
+  width: 100% !important;       /* să ocupe lățimea containerului */
+  height: auto !important;      /* păstrează proporțiile corecte */
+  max-height: 600px;            /* fă mai mare/mai mică: 500–800px */
+  object-fit: contain !important;
+  display: block;
+}
 
 
 
