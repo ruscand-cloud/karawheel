@@ -1,14 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ro">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KaraWheel — Povestea</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="desktop.css">  <!-- nou -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>KaraWheel — Povestea</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="desktop.css" rel="stylesheet"/> <!-- nou -->
+<style>
+/* a11y utilities */
+.visually-hidden{position:absolute !important;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap;padding:0;border:0;margin:-1px;}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.5rem 1rem;background:#fff;color:#000;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,.2);}
 
-</head>
+/* pager */
+.pager{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0;}
+.pager a{display:inline-block;border:1px solid rgba(255,255,255,.2);padding:.5rem 1rem;border-radius:999px;text-decoration:none}
+.pager a:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+
+/* compact TOC */
+.toc{margin:1rem 0;font-size:.95em}
+.toc summary{cursor:pointer}
+.toc a{text-decoration:none}
+</style></head>
 <script>
   (function(){
     const burger = document.querySelector('.burger');
@@ -102,160 +117,155 @@ document.addEventListener('DOMContentLoaded', function(){
   document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') toggle(false); });
 });
 </script>
-
-<body>
+<body><a class="skip-link" href="#main-content">Sari la conținut</a><h1 class="visually-hidden">Povestea — KaraWheel</h1>
 <header class="site-header">
-  <div class="wrap nav">
-    <a href="index.html" class="brand">
-      <img src="assets/Logo.png" alt="KaraWheel" class="logo">
-    </a>
-
-    <button class="burger" type="button" aria-label="Deschide meniul" aria-controls="site-menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav id="site-menu" class="menu">
-      <a href="index.html">Home</a>
-      <a href="povestea.html">Povestea</a>
-      <a href="concept.html">Concept</a>
-      <a href="executie.html">Execuție</a>
-      <a href="autor.html">Autor</a>
-      <a href="galerie.html">Galerie</a>
-      <a href="contact.html" class="cta">Contact</a>
-    </nav>
-  </div>
+<div class="wrap nav">
+<a class="brand nav-link" href="index.html">
+<img alt="KaraWheel" class="logo" decoding="async" loading="lazy" src="assets/Logo.png"/>
+</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-label="Deschide meniul" class="burger" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav class="menu" id="site-menu">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="povestea.html">Povestea</a>
+<a class="nav-link" href="concept.html">Concept</a>
+<a class="nav-link" href="executie.html">Execuție</a>
+<a class="nav-link" href="autor.html">Autor</a>
+<a class="nav-link" href="galerie.html">Galerie</a>
+<a class="cta nav-link" href="contact.html">Contact</a>
+</nav>
+</div>
 </header>
-
-<main>
-
-  <!-- SECTIUNEA 1 -->
-  <section class="intro-history">
-    <div class="wrap">
-      <h2 class="intro-title" style="margin-top:60px;">
+<main id="main-content"><details class="toc"><summary>Cuprins (secțiuni)</summary><ul><li><a href="#redescoperind-spiritul-călătorilor-care-au-deschis-lumi-noi">Redescoperind spiritul călătorilor care au deschis lumi noi</a></li><li><a href="#karawheel-rescrie-povestea">KaraWheel rescrie povestea</a></li><li><a href="#karawheel-rescrie-povestea">KaraWheel rescrie povestea</a></li><li><a href="#karawheel-este-o-punte-între-lumi">KaraWheel este o punte între lumi</a></li></ul></details>
+<!-- SECTIUNEA 1 -->
+<section class="intro-history">
+<div class="wrap">
+<h2 class="intro-title" id="redescoperind-spiritul-călătorilor-care-au-deschis-lumi-noi" style="margin-top:60px;">
         Redescoperind spiritul călătorilor care au deschis lumi noi
       </h2>
+<div class="intro-subtitle" style="max-width:800px; margin:20px auto; text-align:center;">
+<p>Există obiecte care nu sunt doar obiecte.</p>
+<p>Sunt fragmente de istorie, martori ai unor vremuri în care ritmul era altfel, iar drumul însemna descoperire, nu grabă.</p>
+<p>Prairie Schooner a fost vehiculul celor care au împins granițele necunoscutului spre Vest.</p>
+<p>Nu era doar o căruță — era adăpost, speranță, familie, voință și vis.</p>
+<p>Astăzi, trăim într-o lume care a uitat liniștea drumurilor lente și frumusețea lucrurilor făcute cu mâna, nu cu linia de producție.</p>
+<p><em>Dar trecutul nu este pierdut — doar trebuie regăsit.</em></p>
+</div>
 
-      <div class="intro-subtitle" style="max-width:800px; margin:20px auto; text-align:center;">
-        <p>Există obiecte care nu sunt doar obiecte.</p>
-        <p>Sunt fragmente de istorie, martori ai unor vremuri în care ritmul era altfel, iar drumul însemna descoperire, nu grabă.</p>
-        <p>Prairie Schooner a fost vehiculul celor care au împins granițele necunoscutului spre Vest.</p>
-        <p>Nu era doar o căruță — era adăpost, speranță, familie, voință și vis.</p>
-        <p>Astăzi, trăim într-o lume care a uitat liniștea drumurilor lente și frumusețea lucrurilor făcute cu mâna, nu cu linia de producție.</p>
-        <p><em>Dar trecutul nu este pierdut — doar trebuie regăsit.</em></p>
-      </div>
-
-      <<figure class="intro-image-frame">
-  <a href="assets/history_prairie.jpg" target="_blank">
-    <img src="assets/history_prairie.jpg" alt="Prairie Schooner - imagine istorică">
-  </a>
+      &lt;<figure class="intro-image-frame">
+<a href="assets/history_prairie.jpg" target="_blank">
+<img alt="Prairie Schooner - imagine istorică" decoding="async" loading="lazy" src="assets/history_prairie.jpg"/>
+</a>
 </figure>
-
-    </div>
-  </section>
-
-  <!-- SECTIUNEA 2 -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-grid">
-        <div class="section-text">
-          <h2 class="section-title">KaraWheel rescrie povestea</h2>
-          <div class="leadblock">
-            <p>Nu cu metal și plastic, ci cu lemn masiv, tâmplărie autentică, îmbinări reale, miros de rășină și urme de daltă.</p>
-            <p><strong>Nu imită — recreează.</strong></p>
-            <p>Fiecare roată este construită ca odinioară, fiecare detaliu are rol structural, nu decorativ.</p>
-            <p>Este un omagiu adus meșterilor care știau să îmblânzească fibra lemnului și să dea viață materiei naturale.</p>
-            <p><strong>Nu este o rulotă. Nu este un tiny house.</strong></p>
-            <p>Este o reinterpretare fidelă a unui simbol istoric, transformat într-un refugiu intim, cald și adevărat.</p>
-            <p>Un spațiu construit manual, nu industrial.</p>
-            <p>Un obiect cu suflet, nu un produs.</p>
-            <p>În interior, confortul modern este integrat cu respect și discreție: baie, duș, climă, pat generos, lumină caldă — invizibile până ai nevoie de ele.</p>
-            <p>Pentru că luxul adevărat nu înseamnă tehnologie agresivă. Înseamnă liniște, spațiu, natură.</p>
-          </div>
-        </div>
-
-        <figure class="img-card">
-          <img src="assets/povestea_up_right.png" alt="KaraWheel — detaliu exterior">
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTIUNEA 3 -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-grid reverse">
-        <figure class="img-card">
-          <img src="assets/povestea_middle_left.png" alt="KaraWheel — detaliu interior">
-        </figure>
-
-        <div class="section-text">
-          <h2 class="section-title">KaraWheel rescrie povestea</h2>
-          <div class="leadblock">
-            <p>Nu cu metal și plastic, ci cu lemn masiv, tâmplărie autentică, îmbinări reale, miros de rășină și urme de daltă.</p>
-            <p><strong>Nu imită — recreează.</strong></p>
-            <p>Fiecare roată este construită ca odinioară, fiecare detaliu are rol structural, nu decorativ.</p>
-            <p>Este un omagiu adus meșterilor care știau să îmblânzească fibra lemnului și să dea viață materiei naturale.</p>
-            <p><strong>Nu este o rulotă. Nu este un tiny house.</strong></p>
-            <p>Este o reinterpretare fidelă a unui simbol istoric, transformat într-un refugiu intim, cald și adevărat.</p>
-            <p>Un spațiu construit manual, nu industrial.</p>
-            <p>Un obiect cu suflet, nu un produs.</p>
-            <p>În interior, confortul modern este integrat cu respect și discreție: baie, duș, climă, pat generos, lumină caldă — invizibile până ai nevoie de ele.</p>
-            <p>Pentru că luxul adevărat nu înseamnă tehnologie agresivă. Înseamnă liniște, spațiu, natural, timp pentru sine.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTIUNEA 4 -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-grid">
-        <div class="section-text">
-          <h2 class="section-title">KaraWheel este o punte între lumi</h2>
-          <div class="leadblock">
-            <p>O punte între pionierii care traversau preriile și omul urban care caută refugiu, tăcere și sens.</p>
-            <p>Nu construim doar o căruță. Construim o experiență, o poveste, un refugiu, o emoție.</p>
-            <p>Un loc în care să asculți lemnul, vântul și gândurile tale.</p>
-            <p>De ce îl facem?</p>
-            <p>Pentru că există lucruri care nu merită date uitării.</p>
-            <p>Pentru că meșteșugul încă poate emoționa.</p>
-            <p>Pentru că lumea încă are nevoie de autentic, simplu și adevărat.</p>
-            <p>Și pentru că vrem ca tu să poți spune, cândva:<br><em>„Am dormit într-o poveste.”</em></p>
-          </div>
-        </div>
-
-        <figure class="img-card">
-          <img src="assets/povestea_down_right.png" alt="KaraWheel — punte între lumi">
-        </figure>
-      </div>
-    </div>
-  </section>
-
-</main>
-
+</div>
+</section>
+<!-- SECTIUNEA 2 -->
+<section class="section">
+<div class="wrap">
+<div class="section-grid">
+<div class="section-text">
+<h2 class="section-title" id="karawheel-rescrie-povestea">KaraWheel rescrie povestea</h2>
+<div class="leadblock">
+<p>Nu cu metal și plastic, ci cu lemn masiv, tâmplărie autentică, îmbinări reale, miros de rășină și urme de daltă.</p>
+<p><strong>Nu imită — recreează.</strong></p>
+<p>Fiecare roată este construită ca odinioară, fiecare detaliu are rol structural, nu decorativ.</p>
+<p>Este un omagiu adus meșterilor care știau să îmblânzească fibra lemnului și să dea viață materiei naturale.</p>
+<p><strong>Nu este o rulotă. Nu este un tiny house.</strong></p>
+<p>Este o reinterpretare fidelă a unui simbol istoric, transformat într-un refugiu intim, cald și adevărat.</p>
+<p>Un spațiu construit manual, nu industrial.</p>
+<p>Un obiect cu suflet, nu un produs.</p>
+<p>În interior, confortul modern este integrat cu respect și discreție: baie, duș, climă, pat generos, lumină caldă — invizibile până ai nevoie de ele.</p>
+<p>Pentru că luxul adevărat nu înseamnă tehnologie agresivă. Înseamnă liniște, spațiu, natură.</p>
+</div>
+</div>
+<figure class="img-card">
+<img alt="KaraWheel — detaliu exterior" decoding="async" loading="lazy" src="assets/povestea_up_right.png"/>
+</figure>
+</div>
+</div>
+</section>
+<!-- SECTIUNEA 3 -->
+<section class="section">
+<div class="wrap">
+<div class="section-grid reverse">
+<figure class="img-card">
+<img alt="KaraWheel — detaliu interior" decoding="async" loading="lazy" src="assets/povestea_middle_left.png"/>
+</figure>
+<div class="section-text">
+<h2 class="section-title" id="karawheel-rescrie-povestea">KaraWheel rescrie povestea</h2>
+<div class="leadblock">
+<p>Nu cu metal și plastic, ci cu lemn masiv, tâmplărie autentică, îmbinări reale, miros de rășină și urme de daltă.</p>
+<p><strong>Nu imită — recreează.</strong></p>
+<p>Fiecare roată este construită ca odinioară, fiecare detaliu are rol structural, nu decorativ.</p>
+<p>Este un omagiu adus meșterilor care știau să îmblânzească fibra lemnului și să dea viață materiei naturale.</p>
+<p><strong>Nu este o rulotă. Nu este un tiny house.</strong></p>
+<p>Este o reinterpretare fidelă a unui simbol istoric, transformat într-un refugiu intim, cald și adevărat.</p>
+<p>Un spațiu construit manual, nu industrial.</p>
+<p>Un obiect cu suflet, nu un produs.</p>
+<p>În interior, confortul modern este integrat cu respect și discreție: baie, duș, climă, pat generos, lumină caldă — invizibile până ai nevoie de ele.</p>
+<p>Pentru că luxul adevărat nu înseamnă tehnologie agresivă. Înseamnă liniște, spațiu, natural, timp pentru sine.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTIUNEA 4 -->
+<section class="section">
+<div class="wrap">
+<div class="section-grid">
+<div class="section-text">
+<h2 class="section-title" id="karawheel-este-o-punte-între-lumi">KaraWheel este o punte între lumi</h2>
+<div class="leadblock">
+<p>O punte între pionierii care traversau preriile și omul urban care caută refugiu, tăcere și sens.</p>
+<p>Nu construim doar o căruță. Construim o experiență, o poveste, un refugiu, o emoție.</p>
+<p>Un loc în care să asculți lemnul, vântul și gândurile tale.</p>
+<p>De ce îl facem?</p>
+<p>Pentru că există lucruri care nu merită date uitării.</p>
+<p>Pentru că meșteșugul încă poate emoționa.</p>
+<p>Pentru că lumea încă are nevoie de autentic, simplu și adevărat.</p>
+<p>Și pentru că vrem ca tu să poți spune, cândva:<br/><em>„Am dormit într-o poveste.”</em></p>
+</div>
+</div>
+<figure class="img-card">
+<img alt="KaraWheel — punte între lumi" decoding="async" loading="lazy" src="assets/povestea_down_right.png"/>
+</figure>
+</div>
+</div>
+</section>
+<nav aria-label="Paginare" class="pager"><a href="index.html">← Home</a><a href="concept.html">Concept →</a></nav></main>
 <footer class="site-footer">
-  <div class="wrap">
-    <!-- Versiunea desktop/tabletă -->
-    <div class="footer-inner-3col">
-      <div class="footer-left">
+<div class="wrap">
+<!-- Versiunea desktop/tabletă -->
+<div class="footer-inner-3col">
+<div class="footer-left">
         KaraWheel<span style="font-size:10px;vertical-align:top;">™</span> — A PRAIRIE SCHOONER PROJECT
       </div>
-      <div class="footer-center">
-        <img src="assets/Stamp.png" alt="Stamp KaraWheel" class="footer-stamp" />
-      </div>
-      <div class="footer-right">
+<div class="footer-center">
+<img alt="Stamp KaraWheel" class="footer-stamp" decoding="async" loading="lazy" src="assets/Stamp.png">
+</img></div>
+<div class="footer-right">
         © 2025 by DOMETO — Ruscan Dorin
       </div>
-    </div>
-
-    <!-- Versiunea mobil (doar textul cerut) -->
-    <div class="footer-mobile-note">KaraWheel — A Prairie Schooner Project</div>
-  </div>
+</div>
+<!-- Versiunea mobil (doar textul cerut) -->
+<div class="footer-mobile-note">KaraWheel — A Prairie Schooner Project</div>
+</div>
 </footer>
-<script src="script.js"></script>   <!-- dacă îl folosești -->
+<script src="script.js"></script> <!-- dacă îl folosești -->
 <script src="lightbox.js"></script> <!-- nou -->
-
-
-</body>
+<script>
+(function(){
+  try {
+    var here = (location.pathname.split('/').pop() || '').toLowerCase();
+    var links = document.querySelectorAll('nav a.nav-link, .nav a.nav-link');
+    links.forEach(function(a){
+      var href = (a.getAttribute('href')||'').split('?')[0].split('#')[0].toLowerCase();
+      if (href && href===here) a.classList.add('active');
+      a.addEventListener('mousedown', function(){ a.classList.add('active'); });
+      a.addEventListener('mouseup', function(){ setTimeout(function(){ a.classList.remove('active'); },150); });
+      a.addEventListener('mouseleave', function(){ a.classList.remove('active'); });
+    });
+  } catch(e){}
+})();</script></body>
 </html>
