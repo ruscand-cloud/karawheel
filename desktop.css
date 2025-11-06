@@ -123,7 +123,7 @@
 }
 
 /*.intro-image-frame {
-  width: 600px;                      /* lățimea casetei */
+  width: 500px;                      /* lățimea casetei */
   margin: 0 auto 3em auto;
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 10px;
@@ -136,7 +136,7 @@
 }
 
 .intro-image-frame img {
-  width: 500px;                      /* imagine vizibilă complet */
+  width: 350px;                      /* imagine vizibilă complet */
   height: auto;
   object-fit: contain;               /* nimic tăiat */
   border-radius: 6px;
