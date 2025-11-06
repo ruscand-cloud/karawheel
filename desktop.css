@@ -98,17 +98,17 @@
 
 .intro-history {
   text-align: center;
-  margin-top: 2em;              /* distanță față de header */
+  margin-top: 10em;              /* distanță față de header */
   margin-bottom: 4em;
 }
 
 .intro-text {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 2em auto;
 }
 
 .intro-title {
-  font-size: 2rem;              /* titlu vizibil, dar elegant */
+  font-size: 15px;              /* titlu vizibil, dar elegant */
   color: #e8e0d0;
   margin-bottom: 0.4em;
   font-weight: 600;
@@ -125,7 +125,7 @@
 /* imaginea încadrată în chenar */
 .intro-image-frame {
   width: 480px;
-  height: 340px;
+  height: 400px;
   margin: 0 auto;
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 10px;
