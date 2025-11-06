@@ -94,3 +94,54 @@
 .lb .close{ position:fixed; top:16px; right:16px; width:42px; height:42px; border-radius:999px; 
             display:flex; align-items:center; justify-content:center; border:1px solid rgba(255,255,255,.25);
             color:#fff; background:rgba(255,255,255,.08); cursor:pointer; font-size:22px; }
+/* ===== POVESTEA — INTROCUCERE ISTORICĂ ===== */
+
+.intro-history {
+  text-align: center;
+  margin-top: 2em;              /* distanță față de header */
+  margin-bottom: 4em;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 2em auto;
+}
+
+.intro-title {
+  font-size: 2rem;              /* titlu vizibil, dar elegant */
+  color: #e8e0d0;
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.intro-subtitle {
+  font-size: 1.1rem;
+  color: #d2cbb8;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+/* imaginea încadrată în chenar */
+.intro-image-frame {
+  width: 480px;
+  height: 340px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #222 0%, #111 100%);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-image-frame img {
+  width: 440px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
