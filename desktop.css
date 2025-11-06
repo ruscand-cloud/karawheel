@@ -142,4 +142,34 @@
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
+/* ===== POVESTEA — IMAGINE ISTORICĂ (corectat) ===== */
+
+.intro-image-frame {
+  width: 600px;                 /* chenarul dorit */
+  margin: 0 auto 3em auto;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #222 0%, #111 100%);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-image-frame img {
+  width: 100%;                  /* ocupă complet caseta */
+  max-width: 500px;             /* dar nu depășește */
+  height: auto;                 /* păstrează proporțiile */
+  object-fit: contain;          /* se vede întreagă */
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  cursor: pointer;              /* indică clickabil */
+  transition: transform 0.3s ease;
+}
+
+.intro-image-frame img:hover {
+  transform: scale(1.03);       /* ușor efect de zoom */
+}
+
 
